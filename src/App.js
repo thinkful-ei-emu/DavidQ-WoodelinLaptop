@@ -83,7 +83,7 @@ class App extends Component {
       <div className="App">
        <Header />
         <main>
-          <ShoppingList computer = {this.state.selected}/>
+          <ShoppingList seletcted = {this.state.selected} features = {this.props.features}/>
           <section className="main__form">
             <h3>TECH SPECS AND CUSTOMIZATIONS</h3>
             { features }
