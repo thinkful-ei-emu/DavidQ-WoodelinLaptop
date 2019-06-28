@@ -84,6 +84,7 @@ class App extends Component {
        <Header />
         <main>
           <ShoppingList seletcted = {this.state.selected} features = {this.props.features}/>
+          <Reciept items = {this.state.selected} />
           <section className="main__form">
             <h3>TECH SPECS AND CUSTOMIZATIONS</h3>
             { features }
