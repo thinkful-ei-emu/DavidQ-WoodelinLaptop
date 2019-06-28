@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
+import Header from './component/Header';
+import ShoppingList from './component/ShoppingList';
+import Reciept from './component/Reciept';
+import Item from './component/Item.js';
+import Price from './component/Price.js';
+
 
 class App extends Component {
   constructor(props){
@@ -75,12 +81,9 @@ class App extends Component {
 
     return (
       <div className="App">
-        <header>
-          <h1>ELF Computing</h1>
-          <h3>Laptops</h3>
-          <h5>Customize your laptop</h5>  
-        </header>      
+       <Header />
         <main>
+          <ShoppingList computer = {this.state.selected}/>
           <section className="main__form">
             <h3>TECH SPECS AND CUSTOMIZATIONS</h3>
             { features }
