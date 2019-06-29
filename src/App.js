@@ -32,7 +32,7 @@ class App extends Component {
     }
   }
 
-  updateFeature(feature, newValue) {
+   updateFeature = (feature, newValue) => {
     const selected = Object.assign({}, this.state.selected);
     selected[feature] = newValue;
     this.setState({
@@ -41,7 +41,7 @@ class App extends Component {
   }
 
   render() {
-    const summary = Object.keys(this.state.selected)
+    /* const summary = Object.keys(this.state.selected)
           .map(key => <div className="summary__option" key={key}>
             <div className="summary__option__label">{key}  </div>
             <div className="summary__option__value">{this.state.selected[key].name}</div>
@@ -49,9 +49,9 @@ class App extends Component {
               { new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD'})
                   .format(this.state.selected[key].cost) }
             </div>
-        </div>)
+        </div>) */
 
-    const total = Object.keys(this.state.selected)
+    /* const total = Object.keys(this.state.selected)
           .reduce((acc, curr) => acc + this.state.selected[curr].cost, 0);    
 
 
@@ -77,14 +77,14 @@ class App extends Component {
                 { options }
               </ul>
             </div>
-          });      
+          });  */     
 
     return (
       <div className="App">
        <Header />
         <main>
-          <ShoppingList selected = {this.state.selected} features = {this.props.features}/>
-          <Reciept items = {this.state.selected} features = {this.props.features}/>
+          <ShoppingList selected = {this.state.selected} features = {this.props.features} handleUpdate = {this.updateFeature}/>
+          <Reciept items = {this.state.selected} features = {this.props.features} handleUpdate = {this.updateFeature}/>
           {/* <section className="main__form">
             <h3>TECH SPECS AND CUSTOMIZATIONS</h3>
             { features }

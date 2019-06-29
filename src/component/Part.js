@@ -6,7 +6,7 @@ export default function Part(props){
     if(Array.isArray(props.parts)){
     items = props.parts.map((item,index)=>{
       console.log(props.selected);
-      return (<Item className="feature__selected" key={index} id={index} name = {item.name} cost={item.cost} selected= {props.selected} type={props.name}/> );
+      return (<Item className="feature__selected" key={index} id={index} name = {item.name} cost={item.cost} selected= {props.selected} type={props.name} handleUpdate={props.handleUpdate}/> );
 
     });
   }else{

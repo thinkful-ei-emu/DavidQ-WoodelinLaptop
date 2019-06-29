@@ -12,7 +12,7 @@ function ShoppingList(props){
         parts.push({type:key, name:value.name, cost:value.cost});
     }
     parts = parts.map((item,index)=>{
-      return <Part key={index} id={index} name={item.type} parts = {props.features[item.type]} selected = {props.selected}/>
+      return <Part key={index} id={index} name={item.type} parts = {props.features[item.type]} selected = {props.selected} handleUpdate = {props.handleUpdate}/>
     });
 
     return(
