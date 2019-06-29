@@ -1,13 +1,13 @@
 import React from 'react';
 
-function Price(){
+function Price(props){
     return(
-        <header>
-        <h1>ELF Computing</h1>
-        <h3>Laptops</h3>
-        <h5>Customize your laptop</h5>  
-      </header>      
-    )
+      <div className="summary__total"> 
+      <div className="summary__total__label">Your Price: </div>
+      <div className="summary__total__value">{ new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD'}).format(props.totalPrice) }
+     </div>
+     </div>
+    );
 }
 
 

@@ -83,9 +83,9 @@ class App extends Component {
       <div className="App">
        <Header />
         <main>
-          <ShoppingList seletcted = {this.state.selected} features = {this.props.features}/>
-          <Reciept items = {this.state.selected} />
-          <section className="main__form">
+          <ShoppingList selected = {this.state.selected} features = {this.props.features}/>
+          <Reciept items = {this.state.selected} features = {this.props.features}/>
+          {/* <section className="main__form">
             <h3>TECH SPECS AND CUSTOMIZATIONS</h3>
             { features }
           </section>
@@ -99,7 +99,7 @@ class App extends Component {
                   .format(total) }
               </div>
             </div>
-          </section>
+          </section> */}
         </main>
       </div>
     );
